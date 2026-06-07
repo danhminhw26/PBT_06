@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Landing - Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-shop"></i> ShopHub
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <div class="d-flex gap-3 ms-3">
+            <div class="input-group" style="width: 200px">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Tìm kiếm..."
+              />
+              <button class="btn btn-outline-secondary" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <a href="#" class="btn btn-outline-primary position-relative">
+              <i class="bi bi-cart"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >3</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+          "
+        >
+          <div
+            class="position-absolute top-50 start-50 translate-middle text-center text-white"
+          >
+            <h1 class="display-4 fw-bold mb-3">Mua sắm thông minh</h1>
+            <p class="lead mb-4">Giảm giá đến 50% cho sản phẩm chọn lọc</p>
+            <button class="btn btn-warning btn-lg">Mua ngay</button>
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="
+            height: 400px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            position: relative;
+          "
+        >
+          <div
+            class="position-absolute top-50 start-50 translate-middle text-center text-white"
+          >
+            <h1 class="display-4 fw-bold mb-3">Sản phẩm mới</h1>
+            <p class="lead mb-4">Khám phá những thiết kế tuyệt vời nhất</p>
+            <button class="btn btn-light btn-lg">Khám phá</button>
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="
+            height: 400px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            position: relative;
+          "
+        >
+          <div
+            class="position-absolute top-50 start-50 translate-middle text-center text-white"
+          >
+            <h1 class="display-4 fw-bold mb-3">Ưu đãi đặc biệt</h1>
+            <p class="lead mb-4">Chỉ dành cho thành viên VIP</p>
+            <button class="btn btn-danger btn-lg">Tham gia ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Sản phẩm nổi bật</h2>
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm position-relative">
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2"
+                >-30%</span
+              >
+              <div class="ratio ratio-1x1 bg-secondary">
+                <img
+                  src="https://via.placeholder.com/300?text=Product+1"
+                  class="card-img-top object-fit-cover"
+                  alt="Product 1"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Áo phông Premium</h5>
+                <p class="card-text text-muted small">
+                  Chất liệu cotton 100%, thoáng mát
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-danger">299k</span>
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Xem nhanh
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm position-relative">
+              <span class="badge bg-success position-absolute top-0 start-0 m-2"
+                >New</span
+              >
+              <div class="ratio ratio-1x1 bg-secondary">
+                <img
+                  src="https://via.placeholder.com/300?text=Product+2"
+                  class="card-img-top object-fit-cover"
+                  alt="Product 2"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Quần Jean Slim</h5>
+                <p class="card-text text-muted small">
+                  Bó sát, form đẹp, màu bền
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-danger">599k</span>
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Xem nhanh
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm position-relative">
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2"
+                >-50%</span
+              >
+              <div class="ratio ratio-1x1 bg-secondary">
+                <img
+                  src="https://via.placeholder.com/300?text=Product+3"
+                  class="card-img-top object-fit-cover"
+                  alt="Product 3"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Giày Sneaker</h5>
+                <p class="card-text text-muted small">
+                  Đế êm, thoáng khí, đi cả ngày
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-danger">399k</span>
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Xem nhanh
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <div class="ratio ratio-1x1 bg-secondary">
+                <img
+                  src="https://via.placeholder.com/300?text=Product+4"
+                  class="card-img-top object-fit-cover"
+                  alt="Product 4"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Mũ Baseball</h5>
+                <p class="card-text text-muted small">
+                  Chống nắng, có thể điều chỉnh size
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0 text-danger">199k</span>
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#productModal"
+                  >
+                    Xem nhanh
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Chi tiết sản phẩm</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img
+                  src="https://via.placeholder.com/400"
+                  class="img-fluid"
+                  alt="Product"
+                />
+              </div>
+              <div class="col-md-6">
+                <h3>Áo phông Premium</h3>
+                <p class="text-muted">SKU: SKT-001</p>
+                <div class="mb-3">
+                  <span class="h4 text-danger">299k</span>
+                  <span class="text-decoration-line-through text-muted"
+                    >429k</span
+                  >
+                </div>
+                <p class="mb-3">
+                  Áo phông chất lượng cao, làm từ 100% cotton tự nhiên, mềm mại,
+                  thoáng mát và bền lâu. Thích hợp cho cả nam nữ, mọi kích cỡ.
+                </p>
+                <div class="mb-3">
+                  <label class="form-label">Kích thước:</label>
+                  <select class="form-select">
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Số lượng:</label>
+                  <input type="number" class="form-control" value="1" min="1" />
+                </div>
+                <button class="btn btn-danger w-100 py-2">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="fw-bold mb-3">Về chúng tôi</h5>
+            <p class="text-muted small">
+              ShopHub - Nơi mua sắm uy tín, giá tốt và giao hàng nhanh chóng.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="fw-bold mb-3">Danh mục</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-muted text-decoration-none">Quần áo</a>
+              </li>
+              <li>
+                <a href="#" class="text-muted text-decoration-none">Giày dép</a>
+              </li>
+              <li>
+                <a href="#" class="text-muted text-decoration-none">Phụ kiện</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="fw-bold mb-3">Hỗ trợ</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-muted text-decoration-none">Liên hệ</a>
+              </li>
+              <li>
+                <a href="#" class="text-muted text-decoration-none"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-muted text-decoration-none"
+                  >Điều khoản dịch vụ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="fw-bold mb-3">Liên hệ</h5>
+            <p class="text-muted small">
+              <i class="bi bi-telephone"></i> 0123-456-789<br />
+              <i class="bi bi-envelope"></i> hello@shophub.com
+            </p>
+          </div>
+        </div>
+        <hr class="bg-secondary" />
+        <div class="text-center text-muted small">
+          <p>&copy; 2024 ShopHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
