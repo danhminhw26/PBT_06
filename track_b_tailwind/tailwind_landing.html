@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Landing - Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-2">
+            <svg
+              class="w-8 h-8 text-blue-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 3h2v2H3V3zm4 0h2v2H7V3zm4 0h2v2h-2V3zm4 0h2v2h-2V3zM3 7h2v2H3V7zm4 0h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7z"
+              />
+            </svg>
+            <span class="font-bold text-xl text-gray-800 dark:text-white"
+              >ShopHub</span
+            >
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex gap-6">
+            <a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition"
+              >Products</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Search & Cart -->
+          <div class="flex gap-3">
+            <div
+              class="hidden sm:flex items-center bg-gray-100 dark:bg-gray-700 rounded-lg px-3"
+            >
+              <input
+                type="text"
+                placeholder="Tìm kiếm..."
+                class="bg-transparent outline-none py-2 text-sm dark:text-white"
+              />
+            </div>
+            <button
+              class="relative p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition"
+            >
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+              <span
+                class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center"
+                >3</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <div
+      class="relative w-full h-96 md:h-96 lg:h-96 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-900 dark:to-pink-900 flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Mua sắm thông minh
+          </h1>
+          <p class="text-lg md:text-xl mb-6 opacity-90">
+            Giảm giá đến 50% cho sản phẩm chọn lọc
+          </p>
+          <button
+            class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105"
+          >
+            Mua ngay
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+        >
+          Sản phẩm nổi bật
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1 -->
+          <div
+            class="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <div class="relative">
+              <img
+                src="https://via.placeholder.com/300?text=Product+1"
+                alt="Product"
+                class="w-full h-56 object-cover"
+              />
+              <span
+                class="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold"
+                >-30%</span
+              >
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Áo phông Premium
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Chất liệu cotton 100%, thoáng mát
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-red-500">299k</span>
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm transition"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <div class="relative">
+              <img
+                src="https://via.placeholder.com/300?text=Product+2"
+                alt="Product"
+                class="w-full h-56 object-cover"
+              />
+              <span
+                class="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold"
+                >New</span
+              >
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Quần Jean Slim
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Bó sát, form đẹp, màu bền
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-red-500">599k</span>
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm transition"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <div class="relative">
+              <img
+                src="https://via.placeholder.com/300?text=Product+3"
+                alt="Product"
+                class="w-full h-56 object-cover"
+              />
+              <span
+                class="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold"
+                >-50%</span
+              >
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Giày Sneaker
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Đế êm, thoáng khí, đi cả ngày
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-red-500">399k</span>
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm transition"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <div>
+              <img
+                src="https://via.placeholder.com/300?text=Product+4"
+                alt="Product"
+                class="w-full h-56 object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Mũ Baseball
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Chống nắng, có thể điều chỉnh size
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-xl font-bold text-red-500">199k</span>
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm transition"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h5 class="font-bold text-lg mb-4">Về chúng tôi</h5>
+            <p class="text-gray-400 text-sm">
+              ShopHub - Nơi mua sắm uy tín, giá tốt và giao hàng nhanh chóng.
+            </p>
+          </div>
+          <div>
+            <h5 class="font-bold text-lg mb-4">Danh mục</h5>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition">Quần áo</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Giày dép</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Phụ kiện</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-bold text-lg mb-4">Hỗ trợ</h5>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition">Liên hệ</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Điều khoản dịch vụ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-bold text-lg mb-4">Liên hệ</h5>
+            <p class="text-gray-400 text-sm">📞 0123-456-789</p>
+            <p class="text-gray-400 text-sm">📧 hello@shophub.com</p>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm"
+        >
+          <p>&copy; 2024 ShopHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark mode toggle -->
+    <div class="fixed bottom-4 right-4">
+      <button
+        onclick="document.documentElement.classList.toggle('dark')"
+        class="bg-gray-800 dark:bg-gray-200 text-yellow-400 dark:text-gray-800 p-3 rounded-full hover:shadow-lg transition"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
